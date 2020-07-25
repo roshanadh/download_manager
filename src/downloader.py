@@ -5,7 +5,7 @@ from urllib.parse import urlparse
 from os import path, getcwd, mkdir
 import sys
 
-from file_name_generator import gen_new_file_name
+from .file_name_generator import gen_new_file_name
 class Downloader:
 	url = ""
 	domain = ""
