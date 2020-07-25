@@ -1,4 +1,4 @@
-from downloader import Downloader
+from src.downloader import Downloader
 
 
 def begin_download(download_link):
