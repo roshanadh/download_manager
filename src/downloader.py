@@ -2,7 +2,9 @@
 import requests
 # to parse URLs
 from urllib.parse import urlparse
-from os import path, getcwd, mkdir
+from os import path, getcwd
+# to recursively create directories
+from pathlib import Path
 import sys
 
 from .file_name_generator import gen_new_file_name
@@ -40,8 +42,7 @@ class Downloader:
 		self.domain = domain
 
 		download_path = f"{getcwd()}/downloads/{domain}"
-		if not path.exists(download_path):
-			mkdir(download_path)
+		Path(download_path).mkdir(parents=True, exist_ok=True)
 
 		self.base_download_path = download_path		
 
