@@ -3,7 +3,6 @@ from src.downloader import Downloader
 
 def begin_download(download_link):
 	d = Downloader(download_link)
-	# validate url
 	d.download()
 
 
